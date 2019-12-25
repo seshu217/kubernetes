@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: second-pod
+ labels:
+  author: seshu
+  type: backend
+spec:
+ containers:
+  - name: mypostgres
+    image: postgres

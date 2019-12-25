@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: fourth-pod
+ labels:
+  author: seshu
+  type: cicd
+spec:
+ containers:
+  - name: devserver
+    image: jenkins
+    ports:
+     - containerPort: 8080
+       hostPort: 8080

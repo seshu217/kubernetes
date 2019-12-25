@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+ name: first-replicationcontroller
+ labels:
+  author: seshu
+spec:
+ replicas: 3
+ template:
+  metadata:
+   name: tomcat-pod
+   labels:
+    type: webserver
+  spec:
+   containers:
+    - name: first-webserver
+      image: tomcat
+      ports:
+       - containerPort: 8080
+         hostPort: 8080
